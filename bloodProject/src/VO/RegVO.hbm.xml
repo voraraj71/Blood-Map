@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+   <class name="VO.RegVO" table="registrationtable">
+      <id name="regId" type="int" column="regId">
+         <generator class="increment"/>
+      </id>
+      <property name="firstname">
+      <column name="firstname"/></property>
+
+      <property name="lastname">
+       <column name="lastname"/></property>
+     
+     <many-to-one name="loginvo" class="VO.LoginVO" column="LoginID"></many-to-one>
+     
+     <property name="gender">
+       <column name="Gender"/></property>
+       
+       <property name="contactno">
+       <column name="Contactno"/></property>
+       
+      <many-to-one name="stateVO" class="VO.StateVO" column="StateID"></many-to-one>
+	<many-to-one name="cityVO" class="VO.CityVO" column="CityID"></many-to-one>
+		
+       <property name="dob">
+       <column name="DOB"/></property>
+       
+       <property name="address">
+       <column name="Address"/></property>
+       
+       <property name="email">
+       <column name="Email"/></property>
+       
+       <many-to-one name="bloodtypeVO" class="VO.BloodtypeVO" column="BloodtypeID"></many-to-one>
+       
+   </class>
+</hibernate-mapping>

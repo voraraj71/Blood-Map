@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0/EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="VO.BloodproofPhoto" table="bloodproofPhoto">
+<id name="fileID" column="fileID">
+	<generator class="increment" />
+	</id>
+<property name="fileName">
+	<column name="fileName"/>
+</property> 
+<property name="encryptedFileName">
+	<column name="encryptedFileName"/>
+</property> 
+
+	<many-to-one class="VO.LoginVO" name="loginVO" column="loginId" ></many-to-one>
+</class>
+
+</hibernate-mapping>

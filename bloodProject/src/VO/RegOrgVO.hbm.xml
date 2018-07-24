@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+   <class name="VO.RegOrgVO" table="orgregtable">
+      <id name="regOrgId" type="int" column="orgregId">
+         <generator class="increment"/>
+      </id>
+      <property name="orgname">
+      <column name="organisationname"/></property>
+     
+     <many-to-one name="loginvo" class="VO.LoginVO" column="LoginID"></many-to-one>
+     
+       <property name="contactno">
+       <column name="Contactno"/></property>
+       
+       <property name="email">
+       <column name="email"/></property>
+       
+       <property name="address">
+       <column name="address"/></property>
+       
+      <many-to-one name="stateVO" class="VO.StateVO" column="StateID"></many-to-one>
+	<many-to-one name="cityVO" class="VO.CityVO" column="CityID"></many-to-one>
+
+<property name="latitude">
+       <column name="latitude"/></property>
+       <property name="longitude">
+       <column name="longitude"/></property>
+
+</class>
+</hibernate-mapping>
+

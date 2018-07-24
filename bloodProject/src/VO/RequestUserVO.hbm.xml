@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.RequestUserVO" table="userrequestTable">
+		<id name="requestId" type="int" column="requestId">
+			<generator class="increment" />
+		</id>
+		
+		    <property name="deleteStatus">
+      <column name="deleteStatus"/></property>
+      
+      <property name="userRequestStatus">
+      <column name="userRequestStatus"/></property>
+		
+		<many-to-one name="fromUser" class="VO.LoginVO" column="FromUserId"></many-to-one>
+		<many-to-one name="toUser" class="VO.LoginVO" column="ToUser"></many-to-one>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class"> com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost/bloodmap</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.connection.pool_size">10</property>
+		<property name="show_sql">true</property>
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- Mapping files -->
+		
+		<mapping resource="VO/BloodtypeVO.hbm.xml"/>
+		<mapping resource="VO/CityVO.hbm.xml"/>
+		<mapping resource="VO/StateVO.hbm.xml"/>
+		<mapping resource="VO/EventVO.hbm.xml"/>
+		<mapping resource="VO/AvailabilityVO.hbm.xml"/>
+		<mapping resource="VO/RegVO.hbm.xml"/>
+		<mapping resource="VO/LoginVO.hbm.xml"/>
+		<mapping resource="VO/ComplaintVO.hbm.xml"/>
+		<mapping resource="VO/FeedbackVO.hbm.xml"/>
+		<mapping resource="VO/file.hbm.xml"/>
+		<mapping resource="VO/BloodproofPhoto.hbm.xml"/>
+		<mapping resource="VO/RequestUserVO.hbm.xml"/>
+		<mapping resource="VO/RegOrgVO.hbm.xml"/>
+		<!-- <mapping resource="VO/BloodbankVO.hbm.xml"/> -->
+	
+	
+	 </session-factory>
+</hibernate-configuration>

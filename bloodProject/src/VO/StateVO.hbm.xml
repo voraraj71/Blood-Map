@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+   <class name="VO.StateVO" table="stateTable">
+      <id name="stateId" type="int" column="stateId">
+         <generator class="increment"/>
+      </id>
+      
+      <property name="stateName">
+      <column name="stateName"/></property>
+      
+      <property name="stateDescription">
+      <column name="StateDescription"/></property>
+      
+      <property name="deleteStatus">
+      <column name="deleteStatus"/></property>
+
+
+</class>
+</hibernate-mapping>

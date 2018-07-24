@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="VO.EventVO" table="eventTable">
+		<id name="eventId" type="int" column="eventId">
+			<generator class="increment" />
+		</id>
+		
+		<property name="eventName">
+			<column name="EventName" />
+		</property>
+
+		<many-to-one name="stateVO" class="VO.StateVO" column="StateID"></many-to-one>
+		<many-to-one name="cityVO" class="VO.CityVO" column="CityID"></many-to-one>
+		
+		<property name="address">
+			<column name="Address"/>
+		</property>
+		
+		<property name="eDate">
+			<column name="eDate" />
+		</property>
+
+		<property name="eTime">
+			<column name="eTime" />
+		</property>
+
+		<property name="eventDescription">
+			<column name="EventDescription" />
+		</property>
+
+		
+
+	</class>
+</hibernate-mapping>
